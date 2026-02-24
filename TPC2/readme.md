@@ -26,7 +26,19 @@ Para além do que foi estritamente pedido no enunciado, o código desenvolvido i
   * Uso de (`(?i:...)`) como da flag explícita `re.IGNORECASE` (Ex. 1.3).
   * Inclusão de versões otimizadas utilizando **List Comprehensions** em alternativa aos tradicionais ciclos `for` (Ex. 5 e Ex. 10). Adicionalmente, no Ex. 5, demonstrou-se a integração entre a biblioteca `re` e a função nativa `sum()` para um código mais limpo e conciso numa só linha.
 ---
+## Resumo dos Exercícios
 
+* **Alíneas 1.1 a 1.5:** Exercícios introdutórios para explorar as diferenças entre funções de regex (`match`, `search`, `findall`, `sub` e `split`) usando a palavra "hello" e separação por vírgulas.
+* **Exercício 2:** Função `palavra_magica` - Validação de frases que terminam obrigatoriamente com "por favor" seguido de pontuação válida.
+* **Exercício 3:** Função `narcisismo` - Contagem de pronomes ("eu") ignorando *case sensitive* e evitando falsos positivos em palavras compostas.
+* **Exercício 4:** Função `troca_de_curso` - Substituição sensível a maiúsculas da sigla "LEI".
+* **Exercício 5:** Função `soma_string` - Extração de números separados por vírgulas numa *string*, conversão para inteiros e cálculo da sua soma.
+* **Exercício 6:** Função `pronomes` - Extração de vários pronomes pessoais usando lógica de agrupamento e fronteiras.
+* **Exercício 7:** Função `variavel_valida` - Validação rigorosa de nomes de variáveis (letras iniciais e apenas caracteres alfanuméricos/underscores depois).
+* **Exercício 8:** Função `inteiros` - Extração de números inteiros positivos e negativos de uma frase.
+* **Exercício 9:** Função `underscores` - Limpeza avançada de formatação de espaços.
+* **Exercício 10:** Função `codigos_postais` - Divisão e estruturação de uma lista de códigos postais num formato de pares.
+---
 ## Como Executar
 Para testar o código, basta ter o Python instalado. Não são necessárias bibliotecas externas, pois o módulo `re` é nativo da linguagem.
 
