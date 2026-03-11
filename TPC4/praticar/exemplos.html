@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--html não é case sensitive-->
+<!-- elemento root de uma pagina html-->
+<!--podemos adicionar o atributo lang para especificar a lingua (auxilia mecanismos de busca e browsers)-->
+<html lang = "en">
+    <!-- meta informação sobre a pagina html-->
+    <head>
+        <!-- titulo da pagina html-->
+        <title>
+            Page Title
+        </title>
+    </head>
+    <!-- onde esta todo o conteudo visivel-->
+    <body>
+        <!--elemento que define um titulo grande-->
+        <!--vai desde o <h1> ate <h6> -->
+        <!--titulos sao para iniciar topicos (sao usados em algortimos de pesquisa)-->
+        <h1>
+            This is a Heading
+        </h1>
+        <!--podemos definir o tamanho dos titulos caso queiramos-->
+        <h2 style="font-size:60px;">
+            Heading 1
+        </h2>
+        <!--elemento que define um paragrafo (começa sempre em uma nova linha)-->
+        <p>
+            <!--<br> funciona como \n-->
+            This is <br> a paragraph
+        </p>
+        <!-- o atributo style adiciona estilo a um elemento como cor, fonte, tamanho...-->
+        <!--style="property:value;" , são propriedades do CSS-->
+        <p style = "color:red;">
+            This is a red paragraph
+        </p>
+        <!--<body style="background-color:powderblue">--->
+        <!--    <h1>---->
+        <!--        This is a heading---->
+        <!--    </h1>--->
+        <!--    <p>---->
+        <!--        This is a paragrapgh.---->
+        <!--    </p>--->
+        <!--</body>-->
+            
+        <h1 style="background-color:powderblue;">
+            This is a heading
+        </h1>
+        <p style="background-color:tomato;">
+            This is a paragraph.
+        </p>
+        <!--o atributo title define alguma informação extra sobre o elemento-->
+        <p title ="I'm a tooltip">
+            This is a paragraph.
+        </p>
+        <!--para definir links-->
+        <a href ="https://www.w3schools.com"> <!--link que queremos-->
+            This is a link <!--palavra que ao clicar vai dar ao link-->
+        </a>
+        <!--para definir uma imagem-->
+        <!--src=caminho da imagem-->
+        <!--alt= texto alternativo à imagem-->
+        <img src="w3schools.png" alt="W3Schools.com" width="800" height="300">
+        <!--define uma quebra de tema em uma pagina (é exibida como uma linha horizontal)-->
+        <hr>
+        <!--preserva os espaços e quebra de linhas em um texto pre-formatado-->
+        <pre>
+            My Bonnie lies over the ocean.
+
+            My Bonnie lies over the sea.
+
+            My Bonnie lies over the ocean.
+
+            Oh, bring back my Bonnie to me.
+        </pre>
+    </body>
+</html>

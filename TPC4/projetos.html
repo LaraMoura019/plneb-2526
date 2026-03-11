@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sobre nós</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    </head>
+    <body>
+        <header class = "cabecalho">
+            <div class="logo">
+                <a href="home_page.html">
+                    <img src="./imagens/darma_sem_fundo.png" alt ="DARMA">
+                </a>
+            </div>
+            <nav>
+                <ul class="menu_principal">
+                    <li><a href="home_page.html" class="menu_links">Início</a></li>
+                    <li><a href="sobre_nos.html" class="menu_links">Sobre nós</a></li>
+                    <li class="menu_portefolio">
+                        <a href="projetos.html" class="menu_links">Portefólio</a>
+                        <ul class ="sub_menu">
+                            <li><a href="sofas.html">Sofás</a></li>
+                            <li><a href="camas.html">Camas</a></li>
+                            <li><a href="cadeiras.html">Cadeiras & <br> Poltronas</a></li>
+                            <li><a href="projetos.html">Projetos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contactos" class="menu_links">Contactos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1 class="titulo_seccao">Os nossos projetos</h1>
+            <div class="grelha_produtos">
+                <div class="carrossel_clique" onclick="trocarImagem(this)">
+                    <img src="./imagens/projetos/lisboa/56.png" class="ativa">
+                    <img src="./imagens/projetos/lisboa/66.png">
+                    <img src="./imagens/projetos/lisboa/71.png">
+                    <img src="./imagens/projetos/lisboa/73.png">
+                    <img src="./imagens/projetos/lisboa/76.png">
+                    <img src="./imagens/projetos/lisboa/78.png">
+                    <div class="dica_clique"><i class="fa-solid fa-hand-pointer"></i> Clicar</div>
+                </div>
+                <div class="carrossel_clique" onclick="trocarImagem(this)">
+                    <img src="./imagens/projetos/loures/67.png" class="ativa">
+                    <img src="./imagens/projetos/loures/68.png">
+                    <img src="./imagens/projetos/loures/70.png">
+                    <img src="./imagens/projetos/loures/74.png">
+                    <img src="./imagens/projetos/loures/75.png">
+                    <img src="./imagens/projetos/loures/77.png">
+                    <div class="dica_clique"><i class="fa-solid fa-hand-pointer"></i> Clicar</div>
+                </div>
+                <div class="carrossel_clique" onclick="trocarImagem(this)">
+                    <img src="./imagens/projetos/sofa_cinza/49.png" class="ativa">
+                    <img src="./imagens/projetos/sofa_cinza/50.png">
+                    <div class="dica_clique"><i class="fa-solid fa-hand-pointer"></i> Clicar</div>
+                </div>
+                <div class="carrossel_clique" onclick="trocarImagem(this)">
+                    <img src="./imagens/projetos/cabeceiras/69.png" class="ativa">
+                    <img src="./imagens/projetos/cabeceiras/72.png">
+                    <div class="dica_clique"><i class="fa-solid fa-hand-pointer"></i> Clicar</div>
+                </div>
+                <div class="carrossel_clique" onclick="trocarImagem(this)">
+                    <img src="./imagens/projetos/inglaterra/21.png">
+                    <img src="./imagens/projetos/inglaterra/22.png">
+                    <img src="./imagens/projetos/inglaterra/24.png">
+                    <img src="./imagens/projetos/inglaterra/25.png">
+                    <img src="./imagens/projetos/inglaterra/26.png">
+                    <img src="./imagens/projetos/inglaterra/27.png">
+                    <img src="./imagens/projetos/inglaterra/28.png">
+                    <img src="./imagens/projetos/inglaterra/33.png" class="ativa">
+                    <div class="dica_clique"><i class="fa-solid fa-hand-pointer"></i> Clicar</div>
+                </div>
+                <div class="carrossel_clique" onclick="trocarImagem(this)">
+                    <img src="./imagens/projeto_fafe/1.png" class="ativa" >
+                    <img src="./imagens/projeto_fafe/2.png">
+                    <img src="./imagens/projeto_fafe/3.png">
+                    <img src="./imagens/projeto_fafe/4.png">
+                    <img src="./imagens/projeto_fafe/5.jpeg">
+                    <div class="dica_clique"><i class="fa-solid fa-hand-pointer"></i> Clicar</div>
+                </div>
+            
+        </main>
+        <footer id="contactos" class="rodape">
+            <div class="rodape_marca">
+                <h3 class="rodape_logo">DARMA</h3>
+                <p>Concebemos ambientes únicos e peças de mobiliário com a excelência do fabrico artesanal e com a qualidade da Capital do Móvel.</p>
+                <div class="selo_origem">
+                    <img src="./imagens/logotipo_capital_movel.png" alt="Selo Capital do Móvel - Paços de Ferreira">
+                </div>
+            </div>
+
+            <div class="rodape_localizacao">
+                <h4>Localização</h4>
+                <a href="https://maps.google.com/?q=Avenida+Dr.+Paraíso+Torres,+80,+4595-241+Meixomil" target="_blank" rel="noopener noreferrer" class="bloco_mapa">
+                    <p><i class="fa-solid fa-location-dot"></i> Avenida Dr. Paraíso Torres, 80 <br>4595-241 Meixomil</p>
+                    <img src="./imagens/google_maps.png" alt="Localização DARMA no Google Maps">
+                </a>
+            </div>
+
+            <div class="rodape_contactos">
+                <h4>Contactos</h4>
+                <a href="mailto:geral.darma@gmail.com"><i class="fa-solid fa-envelope"></i>geral.darma@gmail.com</a>
+                <a href="tel:+351916157822"><i class="fa-solid fa-phone"></i>(+351) 916 157 822</a>
+                <a href="tel:+351914448122"><i class="fa-solid fa-phone"></i>(+351) 914 448 122</a>
+            </div>
+
+            <div class="rodape_redes_sociais">
+                <h4>Redes Sociais</h4>
+                <a href="https://www.instagram.com/darma.geral/" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i>Instagram</a>
+                <a href="https://www.facebook.com/profile.php?id=100083841033820&locale=pt_PT" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-facebook-f"></i>Facebook</a>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

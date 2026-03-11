@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <title>Darma</title>
+        <!--rel explica a relação do link com o html-->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+
+    <body>
+        <!--cria um cabeçalho-->
+        <header class = "cabecalho">
+            <div class="logo">
+                <a href="home_page.html">
+                    <img src="./imagens/darma_sem_fundo.png" alt ="DARMA">
+                </a>
+            </div>
+            <!--agrupa links principais de navegação-->
+            <nav>
+                <!--lista não ordenada de links-->
+                <ul class="menu_principal">
+                    <li><a href="home_page.html" class="menu_links">Início</a></li>
+                    <li><a href="sobre_nos.html" class="menu_links">Sobre nós</a></li>
+                    <li class="menu_portefolio">
+                        <a href="projetos.html" class="menu_links">Portefólio</a>
+                        <ul class ="sub_menu">
+                            <li><a href="sofas.html">Sofás</a></li>
+                            <li><a href="camas.html">Camas</a></li>
+                            <li><a href="cadeiras.html">Cadeiras & <br> Poltronas</a></li>
+                            <li><a href="projetos.html">Projetos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contactos" class="menu_links">Contactos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- area inicial-->
+        <main>
+            <!--section para cada bloco tematico-->
+            <section class="pagina_inicial">
+                <div class="bloco_texto">
+                    <h2>CONFORTO<br>& DESIGN</h2>
+                    <p>Do sofá perfeito ao ambiente completo. Criamos, desenhamos e selecionamos peças exclusivas para transformar a sua casa num verdadeiro lar.</p>
+                    <a href="projetos.html" class="botao_inicial">VER PROJETOS</a>
+                </div>
+            
+                <div class="bloco_imagem">
+                    <img src="./imagens/carrossel_inicial/sofa_dourado.png" alt="Sofa dourado- DARMA">
+                    <img src="./imagens/carrossel_inicial/sofa_laranja.png" alt="Sofa pele laranja- DARMA">
+                    <img src="./imagens/carrossel_inicial/sofa_beje.png" alt="Sofa beje- DARMA">
+                </div>
+            </section>
+
+            <section class="projetos_realizados">
+                <h2 class="titulo_seccao_projetos">Projetos de Assinatura</h2>
+                <p class="subtitulo_seccao">Explore os ambientes a que demos vida, unindo a nossa visão de design ao nosso fabrico próprio.</p>
+                
+                <div class="grelha_projetos">
+                    <div class="projeto">
+                        <div class="carrossel_projeto">
+                            <img src="./imagens/projeto_inglaterra/20.png" alt="Moradia na Inglaterra">
+                            <img src="./imagens/projeto_inglaterra/24.png" alt="Moradia na Inglaterra">
+                            <img src="./imagens/projeto_inglaterra/33.png" alt="Moradia na Inglaterra">
+                            <img src="./imagens/projeto_inglaterra/25.png" alt="Moradia na Inglaterra">
+                            <img src="./imagens/projeto_inglaterra/26.png" alt="Moradia na Inglaterra">
+                        </div>
+                    <h3>Moradia na Inglaterra</h3>
+                    </div>
+                    <div class="projeto">
+                        <div class="carrossel_projeto">
+                            <img src="./imagens/projeto_lisboa/66.png" alt="Moradia em Lisboa">
+                            <img src="./imagens/projeto_lisboa/69.png" alt="Moradia em Lisboa">
+                            <img src="./imagens/projeto_lisboa/73.png" alt="Moradia em Lisboa">
+                            <img src="./imagens/projeto_lisboa/76.png" alt="Moradia em Lisboa">
+                            <img src="./imagens/projeto_lisboa/78.png" alt="Moradia em Lisboa">
+                        </div>
+                    <h3>Moradia em Lisboa</h3>
+                    </div>
+                    <div class="projeto">
+                        <div class="carrossel_projeto">
+                            <img src="./imagens/projeto_fafe/1.png" alt="Moradia Fafe">
+                            <img src="./imagens/projeto_fafe/2.png" alt="Moradia Fafe">
+                            <img src="./imagens/projeto_fafe/3.png" alt="Moradia Fafe">
+                            <img src="./imagens/projeto_fafe/4.png" alt="Moradia Fafe">
+                            <img src="./imagens/projeto_fafe/5.jpeg" alt="Moradia Fafe">
+                        </div>
+                    <h3>Moradia em Fafe</h3>
+                    </div>
+                </div>   
+            </section>
+
+            <section class="detalhe_artesanal">
+                <div class="conteudo_artesanal">
+                    <h2>DETALHES QUE CONTAM HISTÓRIAS</h2>
+                    <h3>A alma de um projeto artesanal. A garantia de qualidade em cada ponto, a dedicação em cada detalhe.</h3>
+                </div>
+            </section>
+        </main>
+
+        <!--rodape-->
+        <footer id="contactos" class="rodape">
+            <div class="rodape_marca">
+                <h3 class="rodape_logo">DARMA</h3>
+                <p>Concebemos ambientes únicos e peças de mobiliário com a excelência do fabrico artesanal e com a qualidade da Capital do Móvel.</p>
+                <div class="selo_origem">
+                    <img src="./imagens/logotipo_capital_movel.png" alt="Selo Capital do Móvel - Paços de Ferreira">
+                </div>
+            </div>
+
+            <div class="rodape_localizacao">
+                <h4>Localização</h4>
+                <!--target="_blank abre uma nova pagina para aceder"-->
+                <!--rel="noopener noreferrer" é por segurança e privacidade-->
+                <a href="https://maps.google.com/?q=Avenida+Dr.+Paraíso+Torres,+80,+4595-241+Meixomil" target="_blank" rel="noopener noreferrer" class="bloco_mapa">
+                    <!--<i> para icones-->
+                    <p><i class="fa-solid fa-location-dot"></i> Avenida Dr. Paraíso Torres, 80 <br>4595-241 Meixomil</p>
+                    <img src="./imagens/google_maps.png" alt="Localização DARMA no Google Maps">
+                </a>
+            </div>
+
+            <div class="rodape_contactos">
+                <h4>Contactos</h4>
+                <a href="mailto:geral.darma@gmail.com"><i class="fa-solid fa-envelope"></i>geral.darma@gmail.com</a>
+                <a href="tel:+351916157822"><i class="fa-solid fa-phone"></i>(+351) 916 157 822</a>
+                <a href="tel:+351914448122"><i class="fa-solid fa-phone"></i>(+351) 914 448 122</a>
+            </div>
+
+            <div class="rodape_redes_sociais">
+                <h4>Redes Sociais</h4>
+                <a href="https://www.instagram.com/darma.geral/" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i>Instagram</a>
+                <a href="https://www.facebook.com/profile.php?id=100083841033820&locale=pt_PT" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-facebook-f"></i>Facebook</a>
+            </div>
+        </footer>
+    </body>
+</html>

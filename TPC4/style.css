@@ -1,0 +1,668 @@
+/* Remove margens padrão da página */
+body {
+    margin: 0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: #3b4232;
+}
+
+/*----------------------------CABEÇALHO----------------------------*/
+
+.cabecalho {
+    display: flex; /* Alinha os itens lado a lado */
+    justify-content: space-between; /* logo para um lado e o menu para o outro */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #3b4232; /* Cor de fundo Verde */
+    padding: 10px 5%; /*margens */
+
+    /* deixa o cabeçalho no topo da pagina*/
+    position: sticky;
+    top: 0; 
+    z-index: 1000;
+    
+    /* SOMBRA */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25); 
+}
+
+.logo img {
+    width: 200px;       /* O tamanho nos ecrãs normais */
+    max-width: 100%;    /* Se o ecrã for menor que 200px, a imagem encolhe para caber! */
+    height: auto;       /* Faz a altura ajustar-se automaticamente para a logo não ficar "esmagada" ou esticada */
+}
+
+.menu_principal {
+    list-style: none; /*remove as bolinhas dos links*/
+    display: flex; 
+    gap: 40px; /* Espaço entre os links do menu */
+    margin: 0;
+    padding: 0;
+}
+
+.menu_links {
+    color: #dfcca0;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease; /* Efeito suave na transição */
+}
+
+/* Muda a cor do link quando passa o rato por cima (hover)*/
+.menu_links:hover {
+    opacity: 0.6; 
+}
+
+/* SUBMENU (DROPDOWN) */
+
+.menu_portefolio {
+    position: relative; 
+    padding-bottom: 15px; 
+}
+
+.sub_menu {
+    position: absolute;
+    top: 100%; 
+    left: 50%; /* Centraliza o submenu exatamente a meio da palavra Portefólio */
+    transform: translateX(-50%) translateY(15px); /* Desliza de baixo para cima */
+    
+    background-color: #3b4232; 
+    min-width: 200px; 
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+    box-shadow: 0px 15px 20px -5px rgba(0, 0, 0, 0.25);
+    
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease; 
+}
+
+.menu_portefolio:hover .sub_menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.sub_menu li {
+    padding: 0;
+    text-align: center; 
+}
+
+.sub_menu a {
+    display: block;
+    padding: 8px 10px;
+    color: #f4f1ea; 
+    font-family: 'Georgia', serif;
+    font-size: 14px;
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.sub_menu a:hover {
+    color: #dfcca0; 
+    letter-spacing: 4px; /* As letras afastam-se ligeiramente */
+    background-color: rgba(223, 204, 160, 0.05);
+}
+
+/* ---------------------------------- PAGINA INICIAL ----------------------------------*/
+.pagina_inicial {
+    display: flex; /*permite que os blocos fiquem lado a lado*/
+    width: 100%;
+    height: 90vh; /* Ocupa 90% da altura do ecrã*/
+    overflow: hidden; /*corta o que ultrapassa os limites*/
+}
+
+/* --- BLOCO ESQUERDO (TEXTO) --- */
+.bloco_texto {
+    width: 40%;
+    background-color: #3b4232;
+    display: flex;
+    flex-direction: column; /* Organiza título, parágrafo e botão numa coluna vertical */
+    justify-content: center; /* Centraliza o texto verticalmente */
+    padding: 0 8%; /* Adiciona margens laterais*/
+    color: #dfcca0; /* O tom dourado/creme das letras */
+}
+
+.bloco_texto h2 {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.bloco_texto p {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.botao_inicial {
+    display: inline-block; /*permite que o botao aceite linhas e preenchimento*/
+    width: fit-content; /*ajusta a largura ao conteudo que tem dentro*/
+    padding: 15px 30px; /* da largura e preenchimento ao botao*/
+    background-color: #dfcca0; 
+    color: #3b4232; /* Texto verde dentro do botão */
+    text-decoration: none; /*remove a linha a sublinhar dos links*/
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease; /*transição suave ao clicar (quando a cor de fundo muda)*/
+}
+
+.botao_inicial:hover {
+    background-color: #fff; /* Fica branco no hover */
+}
+
+/* --- BLOCO DIREITO (IMAGEM) --- */
+.bloco_imagem {
+    width: 60%;
+    position: relative; 
+    background-color: #3b4232;
+    overflow: hidden; /* Evita que alguma coisa saia do espaço */
+    min-height: 80vh; 
+}
+
+.bloco_imagem img {
+    width: 95%;
+    height: 95%;
+    object-fit: contain; 
+    object-position: center; 
+    position: absolute;
+    top: 40px;
+    left: 0;
+    opacity: 0; 
+    animation: fadeSuave 15s infinite;
+}
+
+/* Desfasamento: Diz a cada imagem quando deve começar a aparecer */
+.bloco_imagem img:nth-child(1) {
+    animation-delay: 0s; 
+}
+.bloco_imagem img:nth-child(2) {
+    animation-delay: 5s; 
+}
+.bloco_imagem img:nth-child(3) {
+    animation-delay: 10s; 
+}
+
+
+/* O Efeito de Dissolver */
+@keyframes fadeSuave {
+    0%   { opacity: 0; }
+    9%  { opacity: 1; } /* Demora um pouco a aparecer de forma suave */
+    20%  { opacity: 1; } /* Fica perfeitamente visível */
+    40%  { opacity: 0; } /* Desvanece enquanto a próxima imagem já está a aparecer */
+    100% { opacity: 0; } /* Mantém-se invisível até recomeçar o ciclo */
+}
+
+/*---------------------SECÇÃO: PROJETOS REALIZADOS ---------------------*/
+
+.titulo_seccao_projetos {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #3b4232;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.subtitulo_seccao {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    color: #3b4232;
+    opacity: 0.8;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- A Grelha de Projetos --- */
+.projetos_realizados, 
+.sobre_intro{
+    background-color: #dfcca0;
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.grelha_projetos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /*permite que as colunas vão para a linha de baixo em ecra mais pequenos*/
+}
+
+.projeto {
+    flex: 1;
+    min-width: 250px;
+    max-width: 320px; 
+}
+
+/* --- Estilo Base do Carrossel --- */
+.carrossel_projeto {
+    display: flex;
+    overflow: hidden;
+    height: 250px;
+    border-radius: 2px;
+}
+
+/* --- Animação para as Imagens --- */
+.carrossel_projeto img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: carrosselPassagem 20s steps(5) infinite;
+}
+
+/* Desfasa o início de cada projeto para não saltarem todos ao mesmo tempo */
+.projeto:nth-child(2) img { animation-delay: 1s; }
+.projeto:nth-child(3) img { animation-delay: 3s; }
+
+@keyframes carrosselPassagem {
+    from { transform: translateX(0); }
+    to { transform: translateX(-500%); } 
+}
+
+/* Pausa ao passar o rato */
+.carrossel_projeto:hover img {
+    animation-play-state: paused;
+}
+
+.projeto h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    margin-top: 10px;
+    color: #3b4232;
+    text-transform: uppercase;
+}
+
+/* -----------------------SECÇÃO: DETALHE ARTESANAL-----------------------*/
+
+.detalhe_artesanal {
+    position: relative;
+    width: 100%;
+    height: 90vh; 
+    background-image: url('./imagens/textura.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito Parallax (A imagem fica fixa ao rolar) */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Camada escura por cima da imagem (Overlay) */
+.detalhe_artesanal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.conteudo_artesanal {
+    position: relative;
+    z-index: 2; /* Fica acima da camada escura */
+    color: #f4f1ea; /* O bege claro da Darma */
+    padding: 0 10%;
+    max-width: 900px;
+}
+
+.conteudo_artesanal h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    }
+
+.conteudo_artesanal h3 {
+    font-family: 'Georgia', serif;
+    font-size: 22px;
+    line-height: 1.6;
+    font-weight: normal;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/*------------------SECÇÃO: RODAPÉ (4 COLUNAS)------------------*/
+
+.rodape {
+    background-color: #3b4232; 
+    padding: 40px 5%; 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.rodape_marca, 
+.rodape_localizacao,
+.rodape_contactos,
+.rodape_redes_sociais {
+    flex: 1;
+    min-width: 180px; 
+}
+
+.rodape_logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #dfcca0;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.rodape h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: #dfcca0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.rodape p {
+    font-family: 'Georgia', serif;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #f4f1ea;
+    opacity: 0.8; 
+    margin-bottom: 12px;
+}
+
+.rodape a {
+    color: inherit; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.rodape a:hover {
+    color: #dfcca0;
+}
+
+.rodape i {
+    margin-right: 8px; 
+    font-size: 16px; 
+    color: #dfcca0; 
+}
+
+.selo_origem {
+    margin-top: 20px; 
+}
+
+.selo_origem img {
+    max-width: 140px; 
+    height: auto;
+    opacity: 0.7; 
+    transition: opacity 0.3s ease;
+}
+
+.selo_origem img:hover {
+    opacity: 1; 
+}
+
+.bloco_mapa {
+    display: block; 
+}
+
+.bloco_mapa img {
+    width: 100%; 
+    max-width: 280px; 
+    height: 120px; 
+    object-fit: cover; 
+    border-radius: 4px; 
+    opacity: 0.6; 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    margin-bottom: 12px; 
+}
+
+.bloco_mapa:hover img {
+    opacity: 1; 
+    transform: scale(1.02); /* Zoom suave */
+}
+
+.bloco_mapa p {
+    margin: 0; 
+    transition: color 0.3s ease;
+}
+
+.bloco_mapa:hover p {
+    color: #dfcca0; 
+}
+
+.rodape_contactos, 
+.rodape_redes_sociais {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+.rodape_redes_sociais a,
+.rodape_contactos a {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 15px;
+    color: #f4f1ea;
+    opacity: 0.8;
+}
+
+.rodape_redes_sociais a:hover {
+    opacity: 1;
+}
+
+/* ----------------------- PÁGINA: SOBRE NÓS ----------------------- */
+
+
+.sobre_intro {
+    padding: 80px 10%;
+    background-color: #e9dfc8; 
+    text-align: center;
+}
+
+.sobre_intro h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: #3b4232;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sobre_intro .subtitulo {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: #a49676; 
+    margin-bottom: 30px;
+}
+
+.linha_separadora {
+    width: 50px;
+    border: none;
+    border-top: 3px solid #a49676;
+    margin: 0 auto 20px auto;
+}
+
+.sobre_intro p {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #3b4232;
+    max-width: 900px;
+    margin: 0 auto 25px auto;
+}
+
+/* --- Secção de Serviços--- */
+.nossos_servicos {
+    background-color: #3b4232; /* Fundo Verde */
+    padding: 80px 5%;
+    text-align: center;
+    color: #f4f1ea;
+}
+
+.nossos_servicos .titulo_seccao {
+    color: #dfcca0; /* Título em dourado sobre o verde */
+    margin-bottom: 50px;
+}
+
+.grelha_servicos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.servico_item {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.servico_item:hover {
+    transform: translateY(-10px); /* Pequeno salto ao passar o rato */
+}
+
+.servico_item i {
+    font-size: 45px;
+    color: #dfcca0;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.servico_item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.servico_item p {
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* --- Frase de Impacto Final --- */
+.sobre_rodape_frase {
+    padding: 100px 10%;
+    background-color: #f4f1ea;
+    text-align: center;
+}
+
+.sobre_rodape_frase blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #3b4232;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* TÍTULOS DAS PÁGINAS (Sofás, Cadeiras, etc) */
+.titulo_seccao {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #dfcca0;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    font-weight: normal;
+}
+/* Espaçamento extra para o título da página */
+main .titulo_seccao {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+/*Organiza os sofás em colunas automáticas */
+.grelha_produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Cria colunas fluidas */
+    gap: 20px; /* Espaço entre as fotografias */
+    padding: 0 5% 80px 5%; /* Margens laterais iguais ao resto do site */
+}
+
+/* A CAIXA DA IMAGEM*/
+.carrossel_clique {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Força todas as imagens a terem a mesma proporção (tipo ecrã) */
+    cursor: pointer; /* Muda o rato para a mãozinha, indicando que é clicável */
+    overflow: hidden;
+    background-color: #3b4232;
+    border-radius: 2px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o rato */
+.carrossel_clique:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.carrossel_clique img {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; /* Garante que a foto preenche o espaço sem ficar esticada */
+    opacity: 0; /* Começam invisíveis */
+    transition: opacity 0.5s ease-in-out; /* Transição suave ao trocar de foto */
+    z-index: 1;
+}
+
+/*A FOTOGRAFIA ATIVA: A única que fica visível */
+.carrossel_clique img.ativa {
+    opacity: 1;
+    z-index: 2; /* Fica por cima das outras */
+}
+
+/* A ETIQUETA "CLICAR": Dica visual para o utilizador */
+.dica_clique {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: rgba(59, 66, 50, 0.85); 
+    color: #dfcca0;
+    padding: 8px 15px;
+    font-family: 'Georgia', serif;
+    font-size: 13px;
+    border-radius: 3px;
+    pointer-events: none;
+    z-index: 3; /* Fica acima de todas as imagens */
+    
+    /* Começa invisível */
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+/* Quando o rato passa no sofá, a etiqueta aparece deslizando */
+.carrossel_clique:hover .dica_clique {
+    opacity: 1;
+    transform: translateY(0);
+}
