@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <title>{{designacao}}</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container" style="min-height: 400px;">
+        <div class="card mx-4" style="margin-top: 80px; height: 250px;">
+            <h2 class="fs-2 fw-bold ps-4 text-capitalize mx-4" style="margin-top: 60px;">{{designacao}}</h2>
+            <p class=" fs-4 ps-5 mx-4" style="margin-top: 20px;">{{descricao}}</p>  
+        </div>
+    </div>
+
+{% endblock %}
